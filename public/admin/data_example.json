@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "source": "x.com",
+        "header": "Example Header 1",
+        "description": "Example description for the first entry.",
+        "issue": "Example issue 1.",
+        "explanation": "Example explanation 1."
+    },
+    {
+        "id": 2,
+        "source": "reddit.com",
+        "header": "Example Header 2",
+        "description": "Example description for the second entry.",
+        "issue": "Example issue 2.",
+        "explanation": "Example explanation 2."
+    }
+]
