@@ -18,8 +18,8 @@
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('homepage')">Homepage</a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('sendLinks')">Send Users Experiment Links</a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('addUsecases')">Add Use Cases</a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('editFeedback')">Create Feedback</a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('viewFeedback')">View All Feedback Forms</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('editFeedback')">Create Survey Form</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('viewFeedback')">View All Survey Forms</a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('seeRepositories')">See Database Repositories</a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('deleteExperiment')">Delete Experiment</a>
             </div>
@@ -123,7 +123,7 @@
 
                 <!-- Edit Feedback Section -->
                 <div id="editFeedback" class="section">
-                    <h2 class="mt-4">Create Feedback Form</h2>
+                    <h2 class="mt-4">Create Survey Form</h2>
                     <div class="card shadow p-4">
                         <form id="feedbackForm">
                             <div class="form-group">
@@ -139,7 +139,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-secondary" id="addFeedbackQuestion">Add Feedback Question</button>
+                                <button type="button" class="btn btn-secondary" id="addFeedbackQuestion">Add Survey Question</button>
                             </div>
                             <ul id="feedbackQuestionsList" class="list-group mb-3">
                                 <!-- Dynamically added feedback questions with options -->
@@ -151,9 +151,9 @@
 
                 <!-- View Feedback Section -->
                 <div id="viewFeedback" class="section">
-                    <h2 class="mt-4">View All Feedback Forms</h2>
+                    <h2 class="mt-4">View All Survey Forms</h2>
                     <div class="form-group">
-                        <label for="feedbackFormDropdown">Select Feedback Form</label>
+                        <label for="feedbackFormDropdown">Select Survey Form</label>
                         <select class="form-control" id="feedbackFormDropdown">
                             <!-- Feedback forms will be populated dynamically -->
                         </select>

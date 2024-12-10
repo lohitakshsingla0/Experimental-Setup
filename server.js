@@ -3,6 +3,12 @@ const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
+const pass_k = process.env.PASS_KEY;
+
+const secretKey = process.env.SECRET_KEY;
+
+console.log(`Your secret key is: ${secretKey}`);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -189,16 +195,6 @@ let currentContext = {
     return botResponse;
   }
 
-//   function exchangeOrder() {
-//     let botResponse = "You have the following orders:<br>";
-//     orders.forEach(order => {
-//       botResponse += `<div><img src="${order.items[0].image}" alt="order image" style="width:100px;height:100px;"> Order ID: ${order.id}  <br> Status: ${order.status}</div>`;
-//     });
-//     botResponse += "<br>Please enter the order ID to exchange and the item you wish to exchange.";
-//     currentContext.action = "exchange";
-//     return botResponse;
-//   }
-
   function handleOrderAction(order) {
     let botResponse = "";
 
@@ -383,82 +379,6 @@ app.post('/send-email', (req, res) => {
 
 });
 
-// Endpoint to save feedback form
-// app.post('/save-feedback-form', (req, res) => {
-//     const { filename, data } = req.body;
-
-//     if (!filename || !data) {
-//         return res.status(400).json({ success: false, message: 'Invalid data' });
-//     }
-
-//     const feedbackDir = path.join(__dirname, 'public', 'userFeedbacks', 'feedbackQuestion');
-
-//     // Ensure the feedback directory exists
-//     if (!fs.existsSync(feedbackDir)) {
-//         fs.mkdirSync(feedbackDir);
-//     }
-
-//     const filePath = path.join(feedbackDir, filename);
-
-//     // Save the feedback form JSON file
-//     fs.writeFile(filePath, JSON.stringify(data, null, 2), (err) => {
-//         if (err) {
-//             console.error('Error saving feedback form:', err);
-//             return res.status(500).json({ success: false, message: 'Failed to save feedback form' });
-//         }
-
-//         // Update experiments.json
-//         fs.readFile(experimentsFilePath, 'utf8', (readErr, jsonData) => {
-//             if (readErr) {
-//                 console.error('Error reading experiments.json:', readErr);
-//                 return res.status(500).json({ success: false, message: 'Failed to read experiments.json' });
-//             }
-
-//             try {
-//                 const experiments = JSON.parse(jsonData);
-
-//                 // Find the matching experiment by title
-//                 const experiment = experiments.experiments.find(
-//                     exp => exp.title === data.experimentTitle
-//                 );
-
-//                 if (!experiment) {
-//                     return res.status(404).json({ success: false, message: 'Experiment not found' });
-//                 }
-
-//                 // Find the matching chatbot by name
-//                 const chatbot = experiment.chatbots.find(
-//                     bot => bot.name === data.chatbotName
-//                 );
-
-//                 if (!chatbot) {
-//                     return res.status(404).json({ success: false, message: 'Chatbot not found' });
-//                 }
-
-//                 // Add the filename to the chatbot's formName array
-//                 if (!chatbot.formName) {
-//                     chatbot.formName = [];
-//                 }
-//                 chatbot.formName.push(filename);
-
-//                 // Write the updated data back to experiments.json
-//                 fs.writeFile(experimentsFilePath, JSON.stringify(experiments, null, 2), (writeErr) => {
-//                     if (writeErr) {
-//                         console.error('Error updating experiments.json:', writeErr);
-//                         return res.status(500).json({ success: false, message: 'Failed to update experiments.json' });
-//                     }
-
-//                     // Respond with success
-//                     res.json({ success: true });
-//                 });
-//             } catch (parseErr) {
-//                 console.error('Error parsing experiments.json:', parseErr);
-//                 res.status(500).json({ success: false, message: 'Failed to parse experiments.json' });
-//             }
-//         });
-//     });
-// });
-
 app.post('/save-feedback-form', (req, res) => {
   const { filename, data } = req.body;
 
@@ -575,7 +495,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
       user: 'lohitakshsingla49@gmail.com', // Replace with your Gmail address
-      pass: 'usww qzfc qteu oxwq',       // Replace with your App Password
+      pass: pass_k,       // Replace with your App Password
   },
 });
 

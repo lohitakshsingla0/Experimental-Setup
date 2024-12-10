@@ -1,0 +1,54 @@
+{
+  "experimentTitle": "Comparison of Chatbot Interfaces",
+  "chatbotName": "Full-Screen Chatbot",
+  "questions": [
+    {
+      "type": "scale",
+      "text": "How easy was it to use the chatbot interface?"
+    },
+    {
+      "type": "scale",
+      "text": "Did the chatbot interface meet your expectations?"
+    },
+    {
+      "type": "scale",
+      "text": "How efficient was the chatbot interface in helping you complete the given tasks?"
+    },
+    {
+      "type": "scale",
+      "text": "Were you satisfied with the responsiveness of the chatbot interface?"
+    },
+    {
+      "type": "scale",
+      "text": "How visually appealing did you find the chatbot interface?"
+    },
+    {
+      "type": "scale",
+      "text": "Was the chatbot interface easy to navigate?"
+    },
+    {
+      "type": "scale",
+      "text": "How clearly could you understand the chatbot's responses?"
+    },
+    {
+      "type": "scale",
+      "text": "Did the chatbot interface feel intuitive and user-friendly?"
+    },
+    {
+      "type": "scale",
+      "text": "Would you recommend this chatbot interface to others?"
+    },
+    {
+      "type": "scale",
+      "text": "Overall, how satisfied were you with the chatbot interface?"
+    },
+    {
+      "type": "text",
+      "text": "What aspects of the chatbot interface did you find most effective or ineffective?"
+    },
+    {
+      "type": "text",
+      "text": "What specific improvements would you suggest for this chatbot interface?"
+    }
+  ]
+}
