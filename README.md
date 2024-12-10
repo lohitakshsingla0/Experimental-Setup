@@ -50,15 +50,5 @@ This repository contains the implementation of an experimental setup designed to
 -  (http://localhost:3000/admin/#)
 
 ---
-
-## Directory Structure
-
-Experimental-Setup/
-├── public/             # Static assets for UI and chatbot
-├── node_modules/       # Installed npm packages
-├── experiments.json    # Configurations for experiments
-├── package.json        # Project metadata and dependencies
-├── server.js           # Main server file for backend
-├── .gitignore          # Files and directories ignored by Git
-
-
+---
+---
