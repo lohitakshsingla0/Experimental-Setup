@@ -44,10 +44,10 @@ This repository contains the implementation of an experimental setup designed to
 ## Usage
 
 1. Start the server:
--  [cd Experimental-Setup]npm start
+-  npm start
 
 2. Access the application at:
--  [cd Experimental-Setup](http://localhost:3000/admin/#)
+-  (http://localhost:3000/admin/#)
 
 
 
