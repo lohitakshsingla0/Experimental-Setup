@@ -12,7 +12,10 @@
         },
         {
           "name": "Small-Screen Chatbot",
-          "link": "http://localhost:3000/comparison/small-screen/"
+          "link": "http://localhost:3000/comparison/small-screen/",
+          "formName": [
+            "Comparison of Chatbot Interfaces_Full-Screen Chatbot_f6864825-7b6b-4d64-b0d0-40092f4b0ded.json"
+          ]
         }
       ]
     },
@@ -20,24 +23,11 @@
       "title": "Dark Patterns in Chatbots",
       "chatbots": [
         {
-          "name": "Chatbot 1",
-          "link": "http://localhost:3000/dark-pattern/chatbot1/"
-        },
-        {
-          "name": "Chatbot 2",
-          "link": "http://localhost:3000/dark-pattern/chatbot2/"
-        },
-        {
-          "name": "Chatbot 3",
-          "link": "http://localhost:3000/dark-pattern/chatbot3/"
-        },
-        {
-          "name": "Chatbot 4",
-          "link": "http://localhost:3000/dark-pattern/chatbot4/"
-        },
-        {
-          "name": "Chatbot 5",
-          "link": "http://localhost:3000/dark-pattern/chatbot5/"
+          "name": "dark-pattern-one",
+          "link": "http://localhost:3000/dark-pattern/dark-pattern-one/",
+          "formName": [
+            "Dark Patterns in Chatbots_dark-pattern-one_ba9e6e47-93a2-4643-96b2-4b8bda5bc72e.json"
+          ]
         }
       ]
     }

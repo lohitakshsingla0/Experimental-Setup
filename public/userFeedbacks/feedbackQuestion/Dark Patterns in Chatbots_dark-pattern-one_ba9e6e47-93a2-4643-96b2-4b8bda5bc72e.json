@@ -1,0 +1,54 @@
+{
+  "experimentTitle": "Dark Patterns in Chatbots",
+  "chatbotName": "dark-pattern-one",
+  "questions": [
+    {
+      "type": "scale",
+      "text": "Did you feel the chatbot provided clear and transparent options?"
+    },
+    {
+      "type": "scale",
+      "text": "How confident were you in understanding the chatbot's suggestions?"
+    },
+    {
+      "type": "scale",
+      "text": "Did you feel pressured or manipulated during the interaction?"
+    },
+    {
+      "type": "scale",
+      "text": "How satisfied were you with the chatbot's ethical behavior?"
+    },
+    {
+      "type": "scale",
+      "text": "Were the chatbot’s intentions clear and unbiased?"
+    },
+    {
+      "type": "scale",
+      "text": "How straightforward was it to complete tasks without confusion?"
+    },
+    {
+      "type": "scale",
+      "text": "Did the chatbot provide adequate alternatives for decision-making?"
+    },
+    {
+      "type": "scale",
+      "text": "How trustworthy did you find the chatbot during the interaction?"
+    },
+    {
+      "type": "scale",
+      "text": "How would you rate the chatbot's ability to respect your preferences?"
+    },
+    {
+      "type": "scale",
+      "text": "Overall, how ethical do you feel the chatbot interaction was?"
+    },
+    {
+      "type": "text",
+      "text": "Did you notice any elements that felt deceptive or manipulative in the chatbot’s responses? If yes, please elaborate."
+    },
+    {
+      "type": "text",
+      "text": "What would you suggest to make chatbot interactions more ethical and user-focused?"
+    }
+  ]
+}
