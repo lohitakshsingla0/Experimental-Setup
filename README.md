@@ -39,6 +39,16 @@ This repository contains the implementation of an experimental setup designed to
 3. Install dependencies:
 -  npm install
 
+---
+
+## Usage
+
+1. Start the server:
+-  [cd Experimental-Setup]npm start
+
+2. Access the application at:
+-  [cd Experimental-Setup](http://localhost:3000/admin/#)
+
 
 
 
