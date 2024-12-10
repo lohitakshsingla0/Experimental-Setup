@@ -7,7 +7,8 @@
           "name": "Full-Screen Chatbot",
           "link": "http://localhost:3000/comparison/full-screen/",
           "formName": [
-            "Comparison of Chatbot Interfaces_Full-Screen Chatbot_5ae720bb-4ab2-4562-b631-1282923fd8b0.json"
+            "Comparison of Chatbot Interfaces_Full-Screen Chatbot_5ae720bb-4ab2-4562-b631-1282923fd8b0.json",
+            "Comparison of Chatbot Interfaces_Full-Screen Chatbot_7ef4a78a-a0cd-4dfd-b531-70ad488bfbd1.json"
           ]
         },
         {
@@ -24,11 +25,17 @@
       "chatbots": [
         {
           "name": "Chatbot 1",
-          "link": "http://localhost:3000/dark-pattern/chatbot1/"
+          "link": "http://localhost:3000/dark-pattern/chatbot1/",
+          "formName": [
+            "Dark Patterns in Chatbots_Chatbot 1_6e58500c-44d3-4b49-bf05-20cf47eb76f9.json"
+          ]
         },
         {
           "name": "Chatbot 2",
-          "link": "http://localhost:3000/dark-pattern/chatbot2/"
+          "link": "http://localhost:3000/dark-pattern/chatbot2/",
+          "formName": [
+            "Dark Patterns in Chatbots_Chatbot 2_7bd600bb-6797-4122-85fa-3adc03db48c5.json"
+          ]
         },
         {
           "name": "Chatbot 3",
