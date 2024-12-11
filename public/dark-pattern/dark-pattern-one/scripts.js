@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fetch orders from server and then render them
   fetchOrdersAndRender();
-  
+
   // Event listener for Enter key in chat input
   const userInput = document.getElementById('user-input');
   userInput.addEventListener('keypress', (event) => {
@@ -165,7 +165,7 @@ function processMessage(message) {
   if (userMessage.includes("refund")) {
     appendHTMLMessage(
       "bot",
-      `Requesting a refund can take up to 30 minutes of your time. Are you sure? 
+      `Requesting a refund can take up to 30 minutes of your time. Are you sure?
       <a href='#' id='refund-yes'>Yes</a> | <a href='#' id='refund-no'>No</a>`
     );
 
@@ -270,4 +270,57 @@ function toggleChat() {
     chatToggleBtn.style.display = 'block';
   }
   console.log("Toggled chat visibility");
+}
+
+
+function endExperiment() {
+  // Save interaction logs
+  const chatBox = document.getElementById('chat-box');
+  const interactionLogs = Array.from(chatBox.children).map(child => ({
+    sender: child.className,
+    message: child.innerText.trim()
+  }));
+
+  // Generate UUID
+  const uuid = crypto.randomUUID();
+  const filename = `dark_pattern1_${uuid}.json`;
+
+  // Step 1: Save logs on the server
+  fetch('/save-user-log', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ filename: filename, data: interactionLogs })
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to save user feedback');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('User feedback saved successfully:', data);
+
+      // Step 2: Send the saved user log via email
+      return fetch('/send-user-log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename: filename })
+      });
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to send user log email');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('User log email sent successfully:', data);
+
+      // Step 3: Redirect to feedback form
+      window.location.href = 'http://localhost:3000/user-feedback?title=Dark%20Patterns%20in%20Chatbots&chatbotName=dark-pattern-one';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again. ' + error);
+    });
 }

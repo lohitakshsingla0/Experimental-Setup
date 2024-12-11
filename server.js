@@ -548,11 +548,34 @@ app.post('/save-feedback', (req, res) => {
   });
 });
 
+// app.post('/save-user-log', (req, res) => {
+//   const { filename, data } = req.body;
+
+//   if (!filename || !data) {
+//     return res.status(400).send('Filename and data are required');
+//   }
+
+//   const filePath = path.join(__dirname, 'public/userFeedbacks/userLogs', filename);
+
+//   // Ensure the directory exists
+//   fs.mkdirSync(path.dirname(filePath), { recursive: true });
+
+//   // Write data to file
+//   fs.writeFile(filePath, JSON.stringify(data, null, 2), err => {
+//     if (err) {
+//       console.error('Error saving feedback:', err);
+//       return res.status(500).send('Failed to save feedback');
+//     }
+//     console.log('Feedback saved to', filePath);
+//     res.status(200).send('Feedback saved successfully');
+//   });
+// });
+
 app.post('/save-user-log', (req, res) => {
   const { filename, data } = req.body;
 
   if (!filename || !data) {
-    return res.status(400).send('Filename and data are required');
+    return res.status(400).json({ success: false, error: 'Filename and data are required' });
   }
 
   const filePath = path.join(__dirname, 'public/userFeedbacks/userLogs', filename);
@@ -564,10 +587,52 @@ app.post('/save-user-log', (req, res) => {
   fs.writeFile(filePath, JSON.stringify(data, null, 2), err => {
     if (err) {
       console.error('Error saving feedback:', err);
-      return res.status(500).send('Failed to save feedback');
+      return res.status(500).json({ success: false, error: 'Failed to save feedback' });
     }
     console.log('Feedback saved to', filePath);
-    res.status(200).send('Feedback saved successfully');
+    // Return JSON instead of text
+    return res.status(200).json({ success: true, message: 'Feedback saved successfully' });
+  });
+});
+
+//Send User Logs
+app.post('/send-user-log', (req, res) => {
+  const { filename } = req.body;
+  const filePath = path.join(__dirname, 'public/userFeedbacks/userLogs', filename);
+
+  fs.access(filePath, fs.constants.F_OK, (err) => {
+      if (err) {
+          console.error('File not found:', filePath);
+          return res.status(404).json({ success: false, error: 'File not found' });
+      }
+
+      fs.readFile(filePath, 'utf8', (readErr, fileContent) => {
+          if (readErr) {
+              console.error('Error reading file:', readErr);
+              return res.status(500).json({ success: false, error: 'Failed to read file' });
+          }
+
+          const mailOptions = {
+              from: 'lohitakshsingla49@gmail.com',
+              to: 'lohitakshsingla0@gmail.com',
+              subject: 'User Log Submission',
+              text: 'Please find the attached user log file.',
+              attachments: [
+                  { filename: filename, content: fileContent }
+              ]
+          };
+
+          transporter.sendMail(mailOptions, (emailErr, info) => {
+              if (emailErr) {
+                  console.error('Error sending email:', emailErr);
+                  return res.status(500).json({ success: false, error: 'Failed to send email.' });
+              }
+
+              console.log('Email sent successfully:', info.response);
+              // Returns JSON already
+              return res.json({ success: true, message: 'User log email sent successfully' });
+          });
+      });
   });
 });
 

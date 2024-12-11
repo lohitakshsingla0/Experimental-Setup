@@ -31,7 +31,7 @@ $(document).ready(function () {
             }
         });
     }
-    
+
 
     function switchChat(chatId) {
         currentChatId = chatId;
@@ -111,6 +111,41 @@ $(document).ready(function () {
     createNewChat();
 });
 
+// function endExperiment() {
+//     // Collect chat messages
+//     const chatBody = document.getElementById('chatBody');
+//     const chatMessages = Array.from(chatBody.children).map(message => ({
+//         sender: message.classList.contains('user') ? 'user' : 'bot',
+//         content: message.innerText.trim()
+//     }));
+
+//     // Generate a UUID for the file name
+//     const uuid = crypto.randomUUID();
+
+//     // Save logs on the server
+//     fetch('/save-user-log', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//             filename: `fullScreen_${uuid}.json`,
+//             data: chatMessages
+//         })
+//     })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Failed to save feedback');
+//             }
+//             console.log('Feedback saved successfully');
+//             // Redirect to feedback form
+//             window.location.href = 'http://localhost:3000/user-feedback?title=Comparison%20of%20Chatbot%20Interfaces&chatbotName=Full-Screen%20Chatbot';
+//         })
+//         .catch(error => {
+//             console.error('Error saving feedback:', error);
+//             alert('Failed to save feedback. Please try again.');
+//         });
+// }
 function endExperiment() {
     // Collect chat messages
     const chatBody = document.getElementById('chatBody');
@@ -121,30 +156,46 @@ function endExperiment() {
 
     // Generate a UUID for the file name
     const uuid = crypto.randomUUID();
+    const filename = `fullScreen_${uuid}.json`;
 
-    // Save logs on the server
+    // Step 1: Save logs on the server
     fetch('/save-user-log', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            filename: `fullScreen_${uuid}.json`,
-            data: chatMessages
-        })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename: filename, data: chatMessages })
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to save feedback');
-            }
-            console.log('Feedback saved successfully');
-            // Redirect to feedback form
-            window.location.href = 'http://localhost:3000/user-feedback?title=Comparison%20of%20Chatbot%20Interfaces&chatbotName=Full-Screen%20Chatbot';
-        })
-        .catch(error => {
-            console.error('Error saving feedback:', error);
-            alert('Failed to save feedback. Please try again.');
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to save feedback');
+        }
+        return response.json(); // Now this will parse valid JSON
+    })
+    .then(data => {
+        console.log('Feedback saved successfully:', data);
+
+        // Step 2: Send the saved user log via email
+        return fetch('/send-user-log', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ filename: filename })
         });
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to send user log email');
+        }
+        return response.json(); // Also expects JSON here
+    })
+    .then(data => {
+        console.log('User log email sent successfully:', data);
+
+        // Step 3: Redirect to feedback form
+        window.location.href = 'http://localhost:3000/user-feedback?title=Comparison%20of%20Chatbot%20Interfaces&chatbotName=Full-Screen%20Chatbot';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again. ' + error);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

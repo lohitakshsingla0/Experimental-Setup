@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fetch orders from server and then render them
   fetchOrdersAndRender();
-  
+
   // Event listener for Enter key in chat input
   const userInput = document.getElementById('user-input');
   userInput.addEventListener('keypress', (event) => {
@@ -153,6 +153,41 @@ function toggleChat() {
   console.log("Toggled chat visibility");
 }
 
+// function endExperiment() {
+//   // Save interaction logs
+//   const chatBox = document.getElementById('chat-box');
+//   const interactionLogs = Array.from(chatBox.children).map(child => ({
+//     sender: child.className,
+//     message: child.innerText.trim()
+//   }));
+
+//   // Generate UUID
+//   const uuid = crypto.randomUUID();
+
+//   // Send logs to server to save as JSON file
+//   fetch('/save-user-log', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       filename: `smallScreen_${uuid}.json`,
+//       data: interactionLogs
+//     })
+//   })
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error('Failed to save user feedback');
+//       }
+//       console.log('User feedback saved successfully');
+//       // Redirect to feedback form
+//       window.location.href = 'http://localhost:3000/user-feedback?title=Comparison%20of%20Chatbot%20Interfaces&chatbotName=Small-Screen%20Chatbot';
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+// }
+
 function endExperiment() {
   // Save interaction logs
   const chatBox = document.getElementById('chat-box');
@@ -163,28 +198,45 @@ function endExperiment() {
 
   // Generate UUID
   const uuid = crypto.randomUUID();
+  const filename = `smallScreen_${uuid}.json`;
 
-  // Send logs to server to save as JSON file
+  // Step 1: Save logs on the server
   fetch('/save-user-log', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      filename: `smallScreen_${uuid}.json`,
-      data: interactionLogs
-    })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ filename: filename, data: interactionLogs })
   })
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to save user feedback');
       }
-      console.log('User feedback saved successfully');
-      // Redirect to feedback form
+      return response.json();
+    })
+    .then(data => {
+      console.log('User feedback saved successfully:', data);
+
+      // Step 2: Send the saved user log via email
+      return fetch('/send-user-log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename: filename })
+      });
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to send user log email');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('User log email sent successfully:', data);
+
+      // Step 3: Redirect to feedback form
       window.location.href = 'http://localhost:3000/user-feedback?title=Comparison%20of%20Chatbot%20Interfaces&chatbotName=Small-Screen%20Chatbot';
     })
     .catch(error => {
       console.error('Error:', error);
+      alert('An error occurred. Please try again. ' + error);
     });
 }
 
