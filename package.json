@@ -11,7 +11,7 @@
   "description": "",
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.19.2",
-    "nodemailer": "^6.9.14"
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
   }
 }

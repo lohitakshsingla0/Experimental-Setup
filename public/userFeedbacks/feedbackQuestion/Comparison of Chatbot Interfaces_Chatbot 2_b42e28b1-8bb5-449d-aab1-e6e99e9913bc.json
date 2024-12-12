@@ -1,0 +1,10 @@
+{
+  "experimentTitle": "Comparison of Chatbot Interfaces",
+  "chatbotName": "Chatbot 2",
+  "questions": [
+    {
+      "type": "scale",
+      "text": "Dark"
+    }
+  ]
+}

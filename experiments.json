@@ -24,9 +24,28 @@
       "chatbots": [
         {
           "name": "dark-pattern-one",
-          "link": "http://localhost:3000/dark-pattern/dark-pattern-one/",
+          "link": "https://experimental-setup.onrender.com/dark-pattern/dark-pattern-one/",
           "formName": [
             "Dark Patterns in Chatbots_dark-pattern-one_ba9e6e47-93a2-4643-96b2-4b8bda5bc72e.json"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "test env 1",
+      "chatbots": [
+        {
+          "name": "Chatbot 1",
+          "link": "http://localhost:3000/normal/chat1/",
+          "formName": [
+            "test env 1_Chatbot 1_4e243256-f57f-4518-b342-25d56b2ec822.json"
+          ]
+        },
+        {
+          "name": "Chatbot 2",
+          "link": "http://localhost:3000/normal/chat2/",
+          "formName": [
+            "test env 1_Chatbot 1_4e243256-f57f-4518-b342-25d56b2ec822.json"
           ]
         }
       ]

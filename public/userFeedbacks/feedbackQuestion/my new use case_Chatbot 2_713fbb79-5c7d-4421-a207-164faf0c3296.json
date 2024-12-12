@@ -1,0 +1,10 @@
+{
+  "experimentTitle": "my new use case",
+  "chatbotName": "Chatbot 2",
+  "questions": [
+    {
+      "type": "scale",
+      "text": "test question 2"
+    }
+  ]
+}

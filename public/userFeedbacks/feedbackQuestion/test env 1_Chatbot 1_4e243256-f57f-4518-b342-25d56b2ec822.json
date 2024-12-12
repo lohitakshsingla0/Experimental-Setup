@@ -1,0 +1,10 @@
+{
+  "experimentTitle": "test env 1",
+  "chatbotName": "Chatbot 1",
+  "questions": [
+    {
+      "type": "scale",
+      "text": "hhh"
+    }
+  ]
+}

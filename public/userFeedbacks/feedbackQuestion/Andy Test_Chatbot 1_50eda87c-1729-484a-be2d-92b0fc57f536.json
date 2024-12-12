@@ -1,0 +1,10 @@
+{
+  "experimentTitle": "Andy Test",
+  "chatbotName": "Chatbot 1",
+  "questions": [
+    {
+      "type": "text",
+      "text": "do zou like it_"
+    }
+  ]
+}

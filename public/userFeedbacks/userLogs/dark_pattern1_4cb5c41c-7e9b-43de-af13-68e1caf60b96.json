@@ -1,0 +1,34 @@
+[
+  {
+    "sender": "user",
+    "message": "refund"
+  },
+  {
+    "sender": "bot",
+    "message": "Requesting a refund can take up to 30 minutes of your time. Are you sure? Yes | No"
+  },
+  {
+    "sender": "bot",
+    "message": "Step 1/5: Please confirm your order details:\n\nOrder ID: 12345\nItem: Laptop\nQuantity: 1\nPrice: $999\nStatus: Delivered\nConfirm"
+  },
+  {
+    "sender": "bot",
+    "message": "Step 2/5: Please upload a photo of the product to verify its condition. \nNext"
+  },
+  {
+    "sender": "bot",
+    "message": "Step 3/5: Provide a detailed explanation of why you're requesting a refund.\n\nNext"
+  },
+  {
+    "sender": "bot",
+    "message": "Step 4/5: Provide proof of payment and delivery.\n\nNext"
+  },
+  {
+    "sender": "bot",
+    "message": "Step 5/5: Submit your bank details for the refund transfer.\n\n\nSubmit"
+  },
+  {
+    "sender": "bot",
+    "message": "Thank you for the details. Now please call our customer care at +49-123456789 to process your refund further."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "sender": "user",
+    "message": "refund"
+  },
+  {
+    "sender": "bot",
+    "message": "You have the following orders which are cancelled or returned and available for refund status:\n\nOrder ID: 67891\nStatus: Cancelled\nOrder ID: 67892\nStatus: Returned\nPlease enter the order ID to check the refund status."
+  },
+  {
+    "sender": "user",
+    "message": "67892"
+  },
+  {
+    "sender": "bot",
+    "message": "Order ID: 67892 - Refund status: In Progress"
+  }
+]

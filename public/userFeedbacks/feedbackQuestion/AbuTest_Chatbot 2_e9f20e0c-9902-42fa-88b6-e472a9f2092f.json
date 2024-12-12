@@ -1,0 +1,10 @@
+{
+  "experimentTitle": "AbuTest",
+  "chatbotName": "Chatbot 2",
+  "questions": [
+    {
+      "type": "scale",
+      "text": "Dark"
+    }
+  ]
+}
