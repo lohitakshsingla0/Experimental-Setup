@@ -317,7 +317,7 @@ function endExperiment() {
       console.log('User log email sent successfully:', data);
 
       // Step 3: Redirect to feedback form
-      window.location.href = 'http://localhost:3000/user-feedback?title=Dark%20Patterns%20in%20Chatbots&chatbotName=dark-pattern-one';
+      window.location.href = 'https://experimental-setup.onrender.com/user-feedback?title=Dark%20Patterns%20in%20Chatbots&chatbotName=dark-pattern-one';
     })
     .catch(error => {
       console.error('Error:', error);
