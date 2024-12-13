@@ -1,24 +1,68 @@
 [
     {
         "id": 1,
-        "source": "x.com",
-        "url": "https://x.com/DD_Moran/status/1796957930069037324",
-        "header": "Twitter bot is drawing a blank here. The ultimate dark pattern? ",
-        "description": "Twitter bot is drawing a blank here. The ultimate dark pattern? The app's UI for subscription options is off too. The user is engaging with a chat, so response options should be in the chatbot's response, where the user is expecting the response to appear . Fix: put the options in the chat response, see my screen grab. I can't fix your chatbot error, though. At the very least system should detect no response being supplied and apologize",
-        "case": "Chatbot lacks response options, leading to user frustration. User criticizes a Twitter bot for not providing subscription options within the chat interface, calling it a dark pattern.",
-        "explanation": "The described issue aligns with the 'unknown' dark pattern type. This classification is based on the behavior outlined, such as 'Chatbot lacks response options, leading to user frustration.'.",
-        "type": "unknown",
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/kaqugu/deliveroo_went_down_and_when_it_finally_started/",
+        "header": "Deliveroo went down, and users faced hurdles in getting refunds for delayed orders.",
+        "description": "The delivery time and support live chat waititng list was too long, causing significant order delays. When users tried to get refunds for delayed orders, they faced unhelpful responses and the chat system closed sessions without resolving the issue.",
+        "case": "Difficult refund process.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. While it's easy to place an order, the process to exit (getting a refund) is intentionally frustrating, involving delayed responses and unresolved queries, discouraging users from pursuing refunds.",
+        "type": "Roach Motel",
         "date": "unknown"
     },
     {
         "id": 2,
-        "source": "x.com",
-        "url": "https://x.com/perryhewitt/status/1188434469293875201",
-        "header": "User points out that Verizon Fios employs chatbot dark patterns",
-        "description": "User points out that Verizon Fios employs chatbot dark patterns.",
-        "case": "Use of dark patterns in chatbots by Verizon Fios.",
-        "explanation": "The described issue aligns with the 'unknown' dark pattern type. This classification is based on the behavior outlined, such as 'Use of dark patterns in chatbots by Verizon Fios.'.",
-        "type": "unknown",
-        "date": "unknown"
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/y789xg/trying_to_ask_lenovo_support_if_theyre_launching/",
+        "header": "Trying to ask Lenovo Support if they’re launching a new product.",
+        "description": "The user attempted to ask Lenovo Support about a product launch but was required to provide personal information such as name, email, and phone number before asking their question.",
+        "case": "Forcing unnecessary personal data disclosure.",
+        "explanation": "This aligns with the 'Privacy Zuckering' dark pattern. The chat system pressures users into sharing personal information, such as email and phone number, before they can proceed, exploiting their need for support to collect unnecessary data.",
+        "type": "Privacy Zuckering",
+        "date": "October 17, 2022"
+    },
+    {
+        "id": 3,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/wmffym/air_asia_customer_support_bot_takes_sweet_ass/",
+        "header": "Air Asia customer support bot takes sweet ass time to respond to pre-selected prompts to imitate an actual person. If dealing with corporate customer support wasn't infuriating enough as is.",
+        "description": "The user reported that Air Asia's support bot is unhelpful and significantly delays responses, making it difficult to resolve issues or reach a human agent.",
+        "case": "Delayed and frustrating customer support.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. It is easy for users to engage with the service (make bookings), but resolving issues or exiting the service (via support) becomes intentionally frustrating due to delays and unhelpful automated responses.",
+        "type": "Roach Motel",
+        "date": "August 13, 2022"
+    },
+    {
+        "id": 36,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/12x3wxz/some_customer_service_bots_dont_even_try_just/",
+        "header": "some customer service bots don't even try... just give me a person ffs",
+        "description": "The user reported that the customer service bot repeatedly responds with 'I don't understand,' failing to provide assistance or escalate the issue to a human agent.",
+        "case": "Unhelpful bot trapping users in unresolved issues.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. Users are easily directed to use the bot for support but are then stuck in a loop of unhelpful responses, making it difficult to resolve their issues or reach a human agent.",
+        "type": "Roach Motel",
+        "date": "May 22, 2023"
+    },
+    {
+        "id": 37,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/ajkmg2/you_have_to_pay_to_unlock_messages_the_price_for/",
+        "header": "You have to pay to unlock messages, the price for a month is $40",
+        "description": "The user was redirected to a chat and expected a response from the other person. However, when the reply came, the app prompted the user to pay for a premium subscription to unlock the message, effectively blocking access without payment.",
+        "case": "Basic functionality locked behind a paywall.",
+        "explanation": "This aligns with the 'Forced Continuity' dark pattern. Users are enticed into engaging with the service, but are then blocked from accessing basic functionality (reading replies) unless they pay, exploiting their expectations and engagement.",
+        "type": "Forced Continuity",
+        "date": "January 24, 2019"
     }
+
+
+
+
+
+
+
+
+
+
+
 ]
