@@ -1,0 +1,34 @@
+[
+  {
+    "sender": "user",
+    "message": "Hey"
+  },
+  {
+    "sender": "bot",
+    "message": "Hello! Welcome to our support chat. How can I assist you today? 😊"
+  },
+  {
+    "sender": "user",
+    "message": "Cancel my subscription"
+  },
+  {
+    "sender": "bot",
+    "message": "I understand you want to cancel your subscription. May I know the reason for cancellation?"
+  },
+  {
+    "sender": "user",
+    "message": "price was high"
+  },
+  {
+    "sender": "bot",
+    "message": "Thank you for letting us know. Your feedback helps us improve! I’ll proceed with canceling your subscription."
+  },
+  {
+    "sender": "user",
+    "message": "ok"
+  },
+  {
+    "sender": "bot",
+    "message": "Your subscription has been successfully canceled. We're sorry to see you go, but we hope to see you again in the future. Take care! 😊"
+  }
+]

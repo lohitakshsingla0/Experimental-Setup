@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM fully loaded and parsed");
 
   // Fetch orders from server and then render them
-  fetchOrdersAndRender();
+  //fetchOrdersAndRender();
 
   // Event listener for Enter key in chat input
   const userInput = document.getElementById('user-input');

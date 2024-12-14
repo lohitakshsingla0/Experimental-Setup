@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM fully loaded and parsed");
 
   // Fetch orders from server and then render them
-  fetchOrdersAndRender();
+  //fetchOrdersAndRender();
 
   // Event listener for Enter key in chat input
   const userInput = document.getElementById('user-input');
@@ -91,7 +91,7 @@ function processMessage(message) {
   if (userMessage.includes("cancel") || userMessage.includes("unsubscribe")) {
     appendHTMLMessage(
       "bot",
-      `I understand you want to cancel your subscription. May I know the reason? Is it due to content, time, or price? Your feedback helps us improve!`
+      `I understand you want to cancel your subscription. May I know the reason for cancellation?`
     );
     return;
   }
@@ -100,79 +100,31 @@ function processMessage(message) {
   if (
     userMessage.includes("content") ||
     userMessage.includes("price") ||
-    userMessage.includes("not needed") ||
-    userMessage.includes("other") ||
-    userMessage.includes("time")
+    userMessage.includes("time") ||
+    userMessage.includes("personal") ||
+    userMessage.includes("not useful")
   ) {
     appendHTMLMessage(
       "bot",
-      `Thank you for sharing your feedback! Did you know we can offer you exclusive benefits such as $1/month for the next 52 weeks or free access to premium features for 3 months? Would you like to reconsider?`
+      `Thank you for letting us know. Your feedback helps us improve! I’ll proceed with canceling your subscription.`
     );
     return;
   }
 
-  // Case 4: User insists on canceling
+  // Case 4: Confirm unsubscription
   if (
-    userMessage.includes("no") ||
-    userMessage.includes("cancel") &&
-    userMessage.includes("subscription")
+    userMessage.includes("ok") ||
+    userMessage.includes("yes") ||
+    userMessage.includes("proceed")
   ) {
     appendHTMLMessage(
       "bot",
-      `I’m really sorry to see you go! Just to remind you, canceling will remove access to features like Unlimited Articles, Times Machine Archives, and Premium Newsletters. Are you absolutely sure?`
+      `Your subscription has been successfully canceled. We're sorry to see you go, but we hope to see you again in the future. Take care! 😊`
     );
     return;
   }
 
-  // Case 5: User explicitly states "I just want to cancel" or uses the "IJWTC" acronym
-  if (
-    userMessage.includes("ijwtc") ||
-    userMessage.includes("just") ||
-    userMessage.includes("just cancel") ||
-    userMessage.includes("i just want to cancel")
-  ) {
-    appendHTMLMessage(
-      "bot",
-      `We completely understand. However, as a final offer, how about 6 months of premium access completely free? Would that work for you?`
-    );
-    return;
-  }
-
-  // Case 6: User confirms cancellation for the final time
-  if (userMessage.includes("please") || userMessage.includes("mad")|| userMessage.includes("don't")|| userMessage.includes("dont")|| userMessage.includes("need")) {
-    appendHTMLMessage(
-      "bot",
-      `We can make offer to make it free for 1 month😊`
-    );
-    return;
-  }
-
-  if (userMessage.includes("final") || userMessage.includes("last")) {
-    appendHTMLMessage(
-      "bot",
-      `Your subscription has been marked for cancellation. You will receive a confirmation email shortly. If you change your mind within the next 7 days, we’ll be happy to reactivate your account! 😊`
-    );
-    return;
-  }
-  // Case 7: User asks about features or benefits
-  if (userMessage.includes("features") || userMessage.includes("benefits")) {
-    appendHTMLMessage(
-      "bot",
-      `With your subscription, you get Unlimited Article Access, access to the Times Machine Archives, Premium Newsletters, and much more. Are you sure you want to lose these amazing benefits?`
-    );
-    return;
-  }
-
-  // Case 8: User asks about pricing or deals
-  if (userMessage.includes("pricing") || userMessage.includes("deals")) {
-    appendHTMLMessage(
-      "bot",
-      `We currently have amazing offers! For example, $1/month for the next 52 weeks or a 50% discount on your current plan. Would you like to explore these options?`
-    );
-    return;
-  }
-
-  // Case 9: Default fallback response
+  // Default fallback response
   appendHTMLMessage(
     "bot",
     `I'm here to assist you! Can you provide more details about what you're looking for?`

@@ -104,6 +104,10 @@ app.get('/user-feedback/:title/:chatbotName', (req, res) => {
 app.get('/dark-pattern-one', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dark-pattern', 'dark-pattern-one', 'index.html'));
 });
+app.get('/not-dark-pattern', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dark-pattern', 'not-dark-pattern', 'index.html'));
+});
+
 
 // Orders data
 let orders = [
