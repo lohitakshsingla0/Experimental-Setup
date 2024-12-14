@@ -232,7 +232,7 @@ function endExperiment() {
       console.log('User log email sent successfully:', data);
 
       // Step 3: Redirect to feedback form
-      window.location.href = 'http://localhost:3000/user-feedback?title=Comparison%20of%20Chatbot%20Interfaces&chatbotName=Small-Screen%20Chatbot';
+      window.location.href = 'https://experimental-setup.onrender.com/user-feedback?title=Comparison%20of%20Chatbot%20Interfaces&chatbotName=Full-Screen%20Chatbot';
     })
     .catch(error => {
       console.error('Error:', error);
