@@ -166,6 +166,26 @@
     <button id="send-button" class="btn btn-dark chat-toggle-btn" onclick="toggleChat()">💬</button>
   </div>
 
+  <div class="modal fade" id="consentModal" tabindex="-1" aria-labelledby="consentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="consentModalLabel">Consent Required</h5>
+        </div>
+        <div class="modal-body">
+          Welcome to the chabot intergace. You can use this chatbot where you can initiate by greeting the chatbot, ask for refund for your order, and follow the conversation.<br>
+
+          By using this chatbot, you agree to the collection and storage of your interactions for research and feedback purposes.
+          Do you consent to proceed?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="declineConsent">Decline</button>
+          <button type="button" class="btn btn-primary" id="acceptConsent">I Consent</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

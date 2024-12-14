@@ -324,3 +324,20 @@ function endExperiment() {
       alert('An error occurred. Please try again. ' + error);
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Show the consent modal on page load
+  $('#consentModal').modal({ backdrop: 'static', keyboard: false });
+
+  // Handle the Decline button
+  document.getElementById('declineConsent').addEventListener('click', () => {
+      alert('You must consent to proceed.');
+      window.location.href = 'https://example.com'; // Redirect if consent is declined
+  });
+
+  // Handle the Accept button
+  document.getElementById('acceptConsent').addEventListener('click', () => {
+      $('#consentModal').modal('hide'); // Hide the modal if consent is given
+  });
+});
