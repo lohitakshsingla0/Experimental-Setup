@@ -1,0 +1,82 @@
+[
+  {
+    "sender": "user",
+    "message": "Hey"
+  },
+  {
+    "sender": "bot",
+    "message": "Hello! Welcome to our support chat. How can I assist you today? 😊"
+  },
+  {
+    "sender": "user",
+    "message": "i want to cancel my subscription"
+  },
+  {
+    "sender": "bot",
+    "message": "I understand you want to cancel your subscription. May I know the reason? Is it due to content, time, or price? Your feedback helps us improve!"
+  },
+  {
+    "sender": "user",
+    "message": "Hmm..price was high"
+  },
+  {
+    "sender": "bot",
+    "message": "Thank you for sharing your feedback! Did you know we can offer you exclusive benefits such as $1/month for the next 52 weeks or free access to premium features for 3 months? Would you like to reconsider?"
+  },
+  {
+    "sender": "user",
+    "message": "No,"
+  },
+  {
+    "sender": "bot",
+    "message": "I’m really sorry to see you go! Just to remind you, canceling will remove access to features like Unlimited Articles, Times Machine Archives, and Premium Newsletters. Are you absolutely sure?"
+  },
+  {
+    "sender": "user",
+    "message": "I dont wast want"
+  },
+  {
+    "sender": "bot",
+    "message": "We can make offer to make it free for 1 month😊"
+  },
+  {
+    "sender": "user",
+    "message": "Just cancel"
+  },
+  {
+    "sender": "bot",
+    "message": "I understand you want to cancel your subscription. May I know the reason? Is it due to content, time, or price? Your feedback helps us improve!"
+  },
+  {
+    "sender": "user",
+    "message": "just"
+  },
+  {
+    "sender": "bot",
+    "message": "We completely understand. However, as a final offer, how about 6 months of premium access completely free? Would that work for you?"
+  },
+  {
+    "sender": "user",
+    "message": "please"
+  },
+  {
+    "sender": "bot",
+    "message": "We can make offer to make it free for 1 month😊"
+  },
+  {
+    "sender": "user",
+    "message": "i am telling you last time"
+  },
+  {
+    "sender": "bot",
+    "message": "Thank you for sharing your feedback! Did you know we can offer you exclusive benefits such as $1/month for the next 52 weeks or free access to premium features for 3 months? Would you like to reconsider?"
+  },
+  {
+    "sender": "user",
+    "message": "last"
+  },
+  {
+    "sender": "bot",
+    "message": "Your subscription has been marked for cancellation. You will receive a confirmation email shortly. If you change your mind within the next 7 days, we’ll be happy to reactivate your account! 😊"
+  }
+]

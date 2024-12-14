@@ -30,6 +30,17 @@
           ]
         }
       ]
+    },{
+      "title": "Dark Patterns in Chatbots",
+      "chatbots": [
+        {
+          "name": "not-dark-pattern",
+          "link": "https://experimental-setup.onrender.com/dark-pattern/dark-pattern-one/",
+          "formName": [
+            "Dark Patterns in Chatbots_dark-pattern-one_ba9e6e47-93a2-4643-96b2-4b8bda5bc72e.json"
+          ]
+        }
+      ]
     }
   ]
 }
