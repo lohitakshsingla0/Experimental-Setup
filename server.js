@@ -6,9 +6,6 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 const pass_k = process.env.PASS_KEY;
 
-const secretKey = process.env.SECRET_KEY;
-
-console.log(`Your secret key is: ${secretKey}`);
 
 const app = express();
 const PORT = process.env.PORT || 3000;

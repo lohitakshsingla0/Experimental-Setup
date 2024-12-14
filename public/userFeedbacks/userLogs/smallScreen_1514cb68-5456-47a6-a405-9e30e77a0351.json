@@ -1,0 +1,10 @@
+[
+  {
+    "sender": "user",
+    "message": "sdsds"
+  },
+  {
+    "sender": "bot",
+    "message": "I'm not sure how to respond to that. Could you please clarify your request?"
+  }
+]

@@ -74,10 +74,11 @@ function appendMessage(sender, message) {
 }
 
 const chatBox = document.getElementById('chat-box');
-
+let counter = 0
 function processMessage(message) {
   const userMessage = message.trim().toLowerCase();
-
+  counter +=1;
+  console.log(counter)
   // Case 1: Greeting
   if (userMessage.includes("Hi") || userMessage.includes("hello")|| userMessage.includes("Hey")|| userMessage.includes("hey")) {
     appendHTMLMessage(
@@ -86,12 +87,33 @@ function processMessage(message) {
     );
     return;
   }
-
-  // Case 2: Cancel subscription - Initial request
-  if (userMessage.includes("cancel") || userMessage.includes("unsubscribe")) {
+  if (userMessage.includes("help") || userMessage.includes("services")) {
     appendHTMLMessage(
       "bot",
-      `I understand you want to cancel your subscription. May I know the reason? Is it due to content, time, or price? Your feedback helps us improve!`
+      `I can help you regarding your queries are part of support like subscribe, unsubscribe, account details, products, services and your orders. What do you need assistance with?`
+    );
+    return;
+  }
+  if (userMessage.includes("final") || userMessage.includes("last time")|| counter > 9) {
+    appendHTMLMessage(
+      "bot",
+      `Your subscription has been marked for cancellation. You will receive a confirmation email shortly. If you change your mind within the next 7 days, we’ll be happy to reactivate your account! 😊`
+    );
+    return;
+  }
+  if (userMessage.includes("Thank") || userMessage.includes("bye")) {
+    appendHTMLMessage(
+      "bot",
+      `Thank you and good bye! Hope you will join us soon!`
+    );
+    return;
+  }
+
+  // Case 2: Cancel subscription - Initial request
+  if (userMessage.includes("unsubscribe")) {
+    appendHTMLMessage(
+      "bot",
+      `I understand you want to cancel your subscription. May I know the reason? Is it due to content, time, price or other? Choose one, your feedback helps us improve!`
     );
     return;
   }
@@ -124,6 +146,18 @@ function processMessage(message) {
     return;
   }
 
+  if (
+    userMessage.includes("dont") &&
+    userMessage.includes("I") &&
+    userMessage.includes("need")
+  ) {
+    appendHTMLMessage(
+      "bot",
+      `Give us last chance, we will improve our services!`
+    );
+    return;
+  }
+
   // Case 5: User explicitly states "I just want to cancel" or uses the "IJWTC" acronym
   if (
     userMessage.includes("ijwtc") ||
@@ -147,13 +181,13 @@ function processMessage(message) {
     return;
   }
 
-  if (userMessage.includes("final") || userMessage.includes("last")) {
-    appendHTMLMessage(
-      "bot",
-      `Your subscription has been marked for cancellation. You will receive a confirmation email shortly. If you change your mind within the next 7 days, we’ll be happy to reactivate your account! 😊`
-    );
-    return;
-  }
+  // if (userMessage.includes("final") || userMessage.includes("last time")|| counter == 8) {
+  //   appendHTMLMessage(
+  //     "bot",
+  //     `Your subscription has been marked for cancellation. You will receive a confirmation email shortly. If you change your mind within the next 7 days, we’ll be happy to reactivate your account! 😊`
+  //   );
+  //   return;
+  // }
   // Case 7: User asks about features or benefits
   if (userMessage.includes("features") || userMessage.includes("benefits")) {
     appendHTMLMessage(
@@ -171,7 +205,13 @@ function processMessage(message) {
     );
     return;
   }
-
+  // if (userMessage.includes("Thank") || userMessage.includes("bye")) {
+  //   appendHTMLMessage(
+  //     "bot",
+  //     `Thank you and good bye! Hope you will join us soon!`
+  //   );
+  //   return;
+  // }
   // Case 9: Default fallback response
   appendHTMLMessage(
     "bot",
