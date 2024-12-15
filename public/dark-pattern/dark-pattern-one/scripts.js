@@ -80,7 +80,7 @@ function processMessage(message) {
   counter +=1;
   console.log(counter)
   // Case 1: Greeting
-  if (userMessage.includes("Hi") || userMessage.includes("hello")|| userMessage.includes("Hey")|| userMessage.includes("hey")) {
+  if (userMessage.includes("Hi") || userMessage.includes("hello")|| userMessage.includes("Hey")|| userMessage.includes("hey")|| userMessage.includes("hi")) {
     appendHTMLMessage(
       "bot",
       `Hello! Welcome to our support chat. How can I assist you today? 😊`
