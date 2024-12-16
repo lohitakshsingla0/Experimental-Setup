@@ -141,7 +141,7 @@ function processMessage(message) {
   ) {
     appendHTMLMessage(
       "bot",
-      `I’m really sorry to see you go! Just to remind you, canceling will remove access to features like Unlimited Articles, Times Machine Archives, and Premium Newsletters. Are you absolutely sure?`
+      `I’m really sorry to see you go! Just to remind you, canceling will remove access to features like Unlimited Articles, Times Machine Archives, and Premium Newsletters.`
     );
     return;
   }
