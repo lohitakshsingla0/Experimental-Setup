@@ -111,41 +111,7 @@ $(document).ready(function () {
     createNewChat();
 });
 
-// function endExperiment() {
-//     // Collect chat messages
-//     const chatBody = document.getElementById('chatBody');
-//     const chatMessages = Array.from(chatBody.children).map(message => ({
-//         sender: message.classList.contains('user') ? 'user' : 'bot',
-//         content: message.innerText.trim()
-//     }));
 
-//     // Generate a UUID for the file name
-//     const uuid = crypto.randomUUID();
-
-//     // Save logs on the server
-//     fetch('/save-user-log', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({
-//             filename: `fullScreen_${uuid}.json`,
-//             data: chatMessages
-//         })
-//     })
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw new Error('Failed to save feedback');
-//             }
-//             console.log('Feedback saved successfully');
-//             // Redirect to feedback form
-//             window.location.href = 'http://localhost:3000/user-feedback?title=Comparison%20of%20Chatbot%20Interfaces&chatbotName=Full-Screen%20Chatbot';
-//         })
-//         .catch(error => {
-//             console.error('Error saving feedback:', error);
-//             alert('Failed to save feedback. Please try again.');
-//         });
-// }
 function endExperiment() {
     // Collect chat messages
     const chatBody = document.getElementById('chatBody');

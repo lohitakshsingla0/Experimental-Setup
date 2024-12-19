@@ -28,12 +28,30 @@
           "formName": [
             "Dark Patterns in Chatbots_dark-pattern-one_ba9e6e47-93a2-4643-96b2-4b8bda5bc72e.json"
           ]
-        },{
+        },
+        {
           "name": "not-dark-pattern",
           "link": "https://experimental-setup.onrender.com/dark-pattern/not-dark-pattern/",
           "formName": [
             "Dark Patterns in Chatbots_dark-pattern-one_ba9e6e47-93a2-4643-96b2-4b8bda5bc72e.json"
           ]
+        }
+      ]
+    },
+    {
+      "title": "Experiment 1",
+      "chatbots": [
+        {
+          "name": "Chatbot 1",
+          "link": "http://localhost:3000/experiment1/chatbot1/"
+        },
+        {
+          "name": "Chatbot 2",
+          "link": "http://localhost:3000/experiment1/chatbot2/"
+        },
+        {
+          "name": "Chatbot 3",
+          "link": "http://localhost:3000/experiment1/chatbot3/"
         }
       ]
     }

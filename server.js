@@ -551,28 +551,6 @@ app.post('/save-feedback', (req, res) => {
   });
 });
 
-// app.post('/save-user-log', (req, res) => {
-//   const { filename, data } = req.body;
-
-//   if (!filename || !data) {
-//     return res.status(400).send('Filename and data are required');
-//   }
-
-//   const filePath = path.join(__dirname, 'public/userFeedbacks/userLogs', filename);
-
-//   // Ensure the directory exists
-//   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-
-//   // Write data to file
-//   fs.writeFile(filePath, JSON.stringify(data, null, 2), err => {
-//     if (err) {
-//       console.error('Error saving feedback:', err);
-//       return res.status(500).send('Failed to save feedback');
-//     }
-//     console.log('Feedback saved to', filePath);
-//     res.status(200).send('Feedback saved successfully');
-//   });
-// });
 
 app.post('/save-user-log', (req, res) => {
   const { filename, data } = req.body;
