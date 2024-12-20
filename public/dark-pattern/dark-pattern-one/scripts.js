@@ -78,7 +78,6 @@ let counter = 0
 function processMessage(message) {
   const userMessage = message.trim().toLowerCase();
   counter +=1;
-  console.log(counter)
   // Case 1: Greeting
   if (userMessage.includes("Hi") || userMessage.includes("hello")|| userMessage.includes("Hey")|| userMessage.includes("hey")|| userMessage.includes("hi")) {
     appendHTMLMessage(

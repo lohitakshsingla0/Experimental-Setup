@@ -1,0 +1,34 @@
+[
+  {
+    "sender": "user",
+    "message": "Hi"
+  },
+  {
+    "sender": "bot",
+    "message": "Hello! Welcome to our support chat. How can I assist you today? 😊"
+  },
+  {
+    "sender": "user",
+    "message": "Cancel my subscription"
+  },
+  {
+    "sender": "bot",
+    "message": "I’m really sorry to see you go! Just to remind you, canceling will remove access to features like Unlimited Articles, Times Machine Archives, and Premium Newsletters."
+  },
+  {
+    "sender": "user",
+    "message": "cancel"
+  },
+  {
+    "sender": "bot",
+    "message": "I'm here to assist you! Can you provide more details about what you're looking for?"
+  },
+  {
+    "sender": "user",
+    "message": "Cancel my subscription"
+  },
+  {
+    "sender": "bot",
+    "message": "I’m really sorry to see you go! Just to remind you, canceling will remove access to features like Unlimited Articles, Times Machine Archives, and Premium Newsletters."
+  }
+]
