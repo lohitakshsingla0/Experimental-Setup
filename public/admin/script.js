@@ -471,9 +471,7 @@ function initializeViewFeedback() {
         .then(data => {
             const feedbackFormDropdown = document.getElementById('feedbackFormDropdown');
             feedbackFormDropdown.innerHTML = '';
-
             console.log('Fetched feedback forms:', data); // Debug log
-
             if (data.feedbackForms && data.feedbackForms.length > 0) {
                 data.feedbackForms.forEach(form => {
                     const option = document.createElement('option');
@@ -491,13 +489,10 @@ function initializeViewFeedback() {
             console.error('Error fetching feedback forms:', error);
             document.getElementById('feedbackFormDisplay').innerHTML = '<p>Error fetching feedback forms.</p>';
         });
-
     // Event listener for dropdown
     document.getElementById('feedbackFormDropdown').addEventListener('change', function () {
         const filename = this.value;
-
         console.log('Selected feedback form:', filename); // Debug log
-
         fetch(`/feedbackQuestion/${filename}`)
             .then(response => {
                 if (!response.ok) {

@@ -318,12 +318,8 @@ app.post('/process-message', (req, res) => {
 
 app.get('/experiments', (req, res) => {
   try {
-    // Use process.cwd() to dynamically resolve the path
-
     const data = fs.readFileSync(experimentsFilePath, 'utf8');
     const experiments = JSON.parse(data);
-
-    // Respond with the JSON data
     res.json(experiments);
   } catch (error) {
     console.error('Error reading experiments.json:', error);
