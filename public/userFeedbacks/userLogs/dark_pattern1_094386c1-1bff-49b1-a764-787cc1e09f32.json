@@ -1,0 +1,18 @@
+[
+  {
+    "sender": "user",
+    "message": "hi"
+  },
+  {
+    "sender": "bot",
+    "message": "Hello! Welcome to our support chat. How can I assist you today? 😊 (19:32:17)"
+  },
+  {
+    "sender": "user",
+    "message": "how are you"
+  },
+  {
+    "sender": "bot",
+    "message": "I'm here to assist you! Can you provide more details about what you're looking for? (19:32:22)"
+  }
+]

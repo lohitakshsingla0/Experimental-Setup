@@ -42,7 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function appendHTMLMessage(sender, htmlMessage) {
   const messageElement = document.createElement('div');
   messageElement.className = sender;
-  messageElement.innerHTML = htmlMessage;
+
+  // Generate timestamp
+  const timestamp = new Date().toLocaleTimeString();
+
+  // Combine message and timestamp into a single line
+  messageElement.innerText = `${htmlMessage} (${timestamp})`;
+
+  //messageElement.innerHTML = htmlMessage;
   const chatBox = document.getElementById('chat-box'); // Adjust according to your HTML structure
   if (chatBox) {
     chatBox.appendChild(messageElement);
