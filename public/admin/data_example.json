@@ -394,46 +394,94 @@
         "explanation": "This aligns with the 'Customer Service Avoidance' dark pattern. The chatbot intentionally feigned confusion and repeatedly asked for clarification, preventing the user from reaching a billing representative to resolve their issue.",
         "type": "Customer Service Avoidance",
         "date": "July 28, 2023"
+    },
+    {
+        "id": 70,
+        "source": "x.com",
+        "url": "https://x.com/christinmassey/status/1838688721010376731",
+        "header": "SiriusXM cancellation process creates unnecessary hurdles.",
+        "description": "When attempting to cancel their subscription, the user was repeatedly shown promotional offers and forced to navigate multiple confusing steps, including mandatory chats with representatives. The cancellation process was deliberately convoluted, making it difficult to proceed without frustration.",
+        "case": "Complicated cancellation process with repeated barriers.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The system makes it extremely easy to subscribe but unnecessarily difficult to cancel, using promotions, unclear navigation, and mandatory chat sessions to discourage users from completing the cancellation.",
+        "type": "Roach Motel",
+        "date": "March 25, 2024"
+    },
+    {
+        "id": 72,
+        "source": "x.com",
+        "url": "https://x.com/hamburger317/status/1862888215084241348",
+        "header": "If you ever think you're sensitive, at least you didn't fold like this chatbot did when I criticized it.",
+        "description": "When the user provided negative feedback about handling and order processing, the chatbot responded with an error message instead of acknowledging or addressing the feedback. This prevented the user from sharing their concerns effectively.",
+        "case": "Chatbot avoids processing negative feedback.",
+        "explanation": "This aligns with the 'Customer Service Avoidance' dark pattern. The chatbot intentionally or systematically fails to handle negative feedback, preventing the user from voicing valid concerns or receiving resolution.",
+        "type": "Customer Service Avoidance",
+        "date": "April 15, 2024"
+    },
+    {
+        "id": 64,
+        "source": "x.com",
+        "url": "https://x.com/wojtekszkutnik/status/1736372389653430358",
+        "header": "Adobe's chat system repeatedly fails to allow cancellation.",
+        "description": "The user attempted to cancel their corporate Adobe Creative Cloud and Acrobat Pro licenses via chat. Despite repeatedly requesting to connect with a real agent and specifying the intent to cancel, the chatbot kept looping back to the same options and failing to address the request.",
+        "case": "Endless loop in chatbot during cancellation request.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The cancellation process is intentionally obstructed by repetitive chatbot loops, preventing users from easily reaching a resolution and creating unnecessary friction.",
+        "type": "Roach Motel",
+        "date": "December 22, 2023"
+      },
+      {
+        "id": 62,
+        "source": "x.com",
+        "url": "https://x.com/justin_schueler/status/1629960530206097411",
+        "header": "The Economist makes canceling a subscription unnecessarily difficult.",
+        "description": "The user attempted to cancel their trial subscription with The Economist. Instead of an easy cancellation process, they were forced to interact with a customer support agent who asked unrelated conversational questions like 'How has your day been so far?' instead of proceeding with the cancellation.",
+        "case": "Cancellation requires unnecessary interaction with customer support.",
+        "explanation": "This aligns with the 'Roach Motel' and 'Customer Service Avoidance' dark patterns. The cancellation process is intentionally obstructed by requiring unnecessary conversations and prolonging the process, discouraging the user from completing the cancellation.",
+        "type": ["Roach Motel", "Customer Service Avoidance"],
+        "date": "February 26, 2023"
+    },
+    {
+        "id": 63,
+        "source": "x.com",
+        "url": "https://x.com/Mars53208096/status/1861750340904800628",
+        "header": "ChatGPT's subscription feature appears to reduce functionality after expiration.",
+        "description": "A user reported that after their ChatGPT subscription ended, the app's functionality significantly degraded. It failed to recognize image inputs and seemed to have lost its context-awareness, causing frustration and confusion.",
+        "case": "Reduced functionality after subscription expiration.",
+        "explanation": "This aligns with the 'Forced Continuity' dark pattern. The user is led to believe that unsubscribing or allowing their subscription to lapse will result in losing essential functionalities, pressuring them to resubscribe.",
+        "type": ["Forced Continuity"],
+        "date": "April 25, 2024"
+    },
+    {
+        "id": 60,
+        "source": "x.com",
+        "url": "https://x.com/levelsio/status/1853108595627540666",
+        "header": "CannyHQ makes it nearly impossible to cancel a subscription.",
+        "description": "To downgrade or cancel a subscription, CannyHQ forces users to go through their support system. However, their support is an AI chatbot that doesn't provide an option to cancel or downgrade, creating a catch-22 situation.",
+        "case": "Subscription Cancellation Obstacle.",
+        "explanation": "This aligns with the 'Roach Motel' and 'Customer Service Avoidance' dark patterns. The platform makes it easy to subscribe but extremely difficult to cancel, requiring users to contact support, which in turn is obstructed by an unhelpful chatbot.",
+        "type": ["Roach Motel", "Customer Service Avoidance"],
+        "date": "April 30, 2024"
+    },
+    {
+        "id": 61,
+        "source": "x.com",
+        "url": "https://x.com/perryhewitt/status/1188434469293875201",
+        "header": "Verizon Fios chatbot makes cancellation difficult.",
+        "description": "When interacting with Verizon Fios' chatbot, users are presented with options for renewing, starting, or restoring a service. The 'Cancel service' option is visually de-emphasized and placed in an unintuitive spot, making it harder to select.",
+        "case": "Obscured cancellation option.",
+        "explanation": "This follows the 'Roach Motel' dark pattern. While subscribing or renewing services is made straightforward, canceling a service is intentionally made less visible and more challenging to execute.",
+        "type": ["Roach Motel"],
+        "date": "October 27, 2019"
+    },
+    {
+        "id": 64,
+        "source": "x.com",
+        "url": "https://x.com/DD_Moran/status/1796957930069037324",
+        "header": "Twitter bot fails to provide actionable options for subscription cancellation.",
+        "description": "The user attempts to cancel their premium subscription via Twitter's chatbot. Despite multiple prompts, the chatbot repeatedly asks the user to select from subscription options but fails to provide actionable response buttons directly in the chat interface.",
+        "case": "Non-functional chatbot interface for cancellation.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The chatbot creates unnecessary friction in the cancellation process by repeatedly showing non-actionable text prompts instead of functional options, making cancellation difficult.",
+        "type": "Roach Motel",
+        "date": "June 3, 2024"
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ]
