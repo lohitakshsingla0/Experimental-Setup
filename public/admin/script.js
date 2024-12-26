@@ -559,6 +559,70 @@ function displayFeedbackForm(formData) {
 
 
 // Function to fetch and populate the table
+// function populateTableFromJSON() {
+//     const tableBody = document.getElementById('dataTableBody');
+//     const hoverCard = document.getElementById('hoverCard');
+//     const cardContent = document.getElementById('cardContent');
+
+//     tableBody.innerHTML = ''; // Clear existing rows
+
+//     fetch('data.json') // Adjust the path to match the location of your JSON file
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error(`Error fetching data: ${response.statusText}`);
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log('Fetched data:', data); // Log the fetched data for debugging
+//             data.forEach(entry => {
+//                 // Create a table row
+//                 const row = document.createElement('tr');
+//                 row.innerHTML = `
+//                     <td>${entry.id}</td>
+//                     <td>${entry.source}</td>
+//                     <td>${entry.header}</td>
+//                     <td>${entry.description}</td>
+//                     <td>${entry.issue}</td>
+//                     <td>${entry.explanation}</td>
+//                 `;
+
+//                 // Add hover event listeners for the row
+//                 row.addEventListener('mouseenter', (e) => {
+//                     // Populate the card with data
+//                     cardContent.innerHTML = `
+//                         <strong>ID:</strong> ${entry.id}<br>
+//                         <strong>Source:</strong> ${entry.source}<br>
+//                         <strong>Header:</strong> ${entry.header}<br>
+//                         <strong>Description:</strong> ${entry.description}<br>
+//                         <strong>Issue:</strong> ${entry.issue}<br>
+//                         <strong>Explanation:</strong> ${entry.explanation}
+//                     `;
+//                     // Position the card
+//                     hoverCard.style.top = `${e.pageY + 10}px`;
+//                     hoverCard.style.left = `${e.pageX + 10}px`;
+//                     hoverCard.style.display = 'block';
+//                 });
+
+//                 row.addEventListener('mousemove', (e) => {
+//                     // Update the card position
+//                     hoverCard.style.top = `${e.pageY + 10}px`;
+//                     hoverCard.style.left = `${e.pageX + 10}px`;
+//                 });
+
+//                 row.addEventListener('mouseleave', () => {
+//                     // Hide the card
+//                     hoverCard.style.display = 'none';
+//                 });
+
+//                 tableBody.appendChild(row);
+//             });
+//         })
+//         .catch(error => {
+//             console.error('Error fetching or processing data:', error);
+//             tableBody.innerHTML = '<tr><td colspan="6" class="text-center text-danger">Failed to load data.</td></tr>';
+//         });
+// }
 function populateTableFromJSON() {
     const tableBody = document.getElementById('dataTableBody');
     const hoverCard = document.getElementById('hoverCard');
@@ -579,24 +643,30 @@ function populateTableFromJSON() {
                 // Create a table row
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${entry.id}</td>
-                    <td>${entry.source}</td>
-                    <td>${entry.header}</td>
-                    <td>${entry.description}</td>
-                    <td>${entry.issue}</td>
-                    <td>${entry.explanation}</td>
+                    <td>${entry.id || ''}</td>
+                    <td>${entry.source || ''}</td>
+                    <td><a href="${entry.url || '#'}" target="_blank">Link</a></td>
+                    <td>${entry.header || ''}</td>
+                    <td>${entry.description || ''}</td>
+                    <td>${entry.case || ''}</td>
+                    <td>${entry.explanation || ''}</td>
+                    <td>${entry.type || ''}</td>
+                    <td>${entry.date || ''}</td>
                 `;
 
                 // Add hover event listeners for the row
                 row.addEventListener('mouseenter', (e) => {
                     // Populate the card with data
                     cardContent.innerHTML = `
-                        <strong>ID:</strong> ${entry.id}<br>
-                        <strong>Source:</strong> ${entry.source}<br>
-                        <strong>Header:</strong> ${entry.header}<br>
-                        <strong>Description:</strong> ${entry.description}<br>
-                        <strong>Issue:</strong> ${entry.issue}<br>
-                        <strong>Explanation:</strong> ${entry.explanation}
+                        <strong>ID:</strong> ${entry.id || ''}<br>
+                        <strong>Source:</strong> ${entry.source || ''}<br>
+                        <strong>URL:</strong> <a href="${entry.url || '#'}" target="_blank">Link</a><br>
+                        <strong>Header:</strong> ${entry.header || ''}<br>
+                        <strong>Description:</strong> ${entry.description || ''}<br>
+                        <strong>Case:</strong> ${entry.case || ''}<br>
+                        <strong>Explanation:</strong> ${entry.explanation || ''}<br>
+                        <strong>Type:</strong> ${entry.type || ''}<br>
+                        <strong>Date:</strong> ${entry.date || ''}
                     `;
                     // Position the card
                     hoverCard.style.top = `${e.pageY + 10}px`;
@@ -620,6 +690,6 @@ function populateTableFromJSON() {
         })
         .catch(error => {
             console.error('Error fetching or processing data:', error);
-            tableBody.innerHTML = '<tr><td colspan="6" class="text-center text-danger">Failed to load data.</td></tr>';
+            tableBody.innerHTML = '<tr><td colspan="9" class="text-center text-danger">Failed to load data.</td></tr>';
         });
 }
