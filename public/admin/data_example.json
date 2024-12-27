@@ -278,7 +278,7 @@
         "id": 26,
         "source": "reddit.com",
         "url": "https://www.reddit.com/r/assholedesign/comments/15glycq/so_bing_closes_the_chat_when_you_ask_why_there_is/",
-        "header": "Bing closes the chat when you ask why there is an ad in the responses.",
+        "header": "So, bing closes the chat when you ask why there is an ad on his answers, if this isn't an asshole move I don't know what",
         "description": "The user questioned why advertisements appeared in Bing chatbot responses. Instead of addressing the concern, the chatbot abruptly ended the conversation, preventing further inquiry or resolution.",
         "case": "Chat closed abruptly after a valid complaint.",
         "explanation": "This aligns with the 'Customer Service Avoidance' dark pattern. The chatbot intentionally ended the session when faced with a difficult or critical question, avoiding accountability and preventing the user from receiving a proper response.",
@@ -483,5 +483,4 @@
         "type": "Roach Motel",
         "date": "June 3, 2024"
     }
-
 ]
