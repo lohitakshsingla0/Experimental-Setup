@@ -118,6 +118,5 @@ For more detailed insights into the experimental design, please refer to the **I
 
 For questions or support, please reach out via:
 - **Email:** [lohitaksh.singla@s2021.tu-chemnitz.de] and [anjali.gupta@s2021.tu-chemnitz.de]
-- **Email:** [anjali.gupta@s2021.tu-chemnitz.de]
 
 ---
