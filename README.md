@@ -65,6 +65,13 @@ cd Experimental-Setup
 npm install
 ```
 
+4. **Configure Environment Variables:**
+- Create a `.env` file in the root directory.
+- Add the Google email key:
+```env
+PASS_KEY=your_google_email_key
+```
+
 ---
 
 ## 🛠️ **Usage**
@@ -94,19 +101,6 @@ This project serves two key research objectives:
 
 Both setups include survey forms and automated interaction logs for quantitative and qualitative analysis.
 
----
-
-## 📁 **Project Structure**
-
-```
-.
-├── /src           # Source code for chatbot frontend and backend
-├── /config        # Configuration files for chatbot interfaces and experiments
-├── /public        # Static assets
-├── /logs          # Interaction and error logs
-├── /surveys       # Survey templates for user feedback
-└── README.md      # Project documentation
-```
 
 ---
 
@@ -120,35 +114,10 @@ For more detailed insights into the experimental design, please refer to the **I
 
 ---
 
-## 📝 **How to Contribute**
-
-1. Fork the repository.
-2. Create a new branch (`feature/your-feature-name`).
-3. Commit your changes (`git commit -m "Add feature"`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a Pull Request.
-
----
-
-## 🛡️ **Ethical Guidelines**
-
-- All user data is anonymized.
-- Experiments comply with ethical standards, including informed consent and data protection.
-
----
-
 ## 📞 **Support**
 
 For questions or support, please reach out via:
-- **Email:** [your-email@example.com]
-- **GitHub Issues:** [Open an issue](https://github.com/lohitakshsingla0/Experimental-Setup/issues)
+- **Email:** [lohitaksh.singla@s2021.tu-chemnitz.de] and [anjali.gupta@s2021.tu-chemnitz.de]
+- **Email:** [anjali.gupta@s2021.tu-chemnitz.de]
 
 ---
-
-## 📄 **License**
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-This README serves as a guide for examiners and researchers to understand, set up, and operate the experimental environment efficiently.
