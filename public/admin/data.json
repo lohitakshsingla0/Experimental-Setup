@@ -482,5 +482,149 @@
         "explanation": "This aligns with the 'Roach Motel' dark pattern. The chatbot creates unnecessary friction in the cancellation process by repeatedly showing non-actionable text prompts instead of functional options, making cancellation difficult.",
         "type": "Roach Motel",
         "date": "June 3, 2024"
+    },
+    {
+        "id": 45,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/15glycq/so_bing_closes_the_chat_when_you_ask_why_there_is/",
+        "header": "Bing chat closes when questioned about ads in responses.",
+        "description": "A user asks Bing Chat why advertisements are appearing in responses. Instead of addressing the question, the chatbot abruptly ends the conversation, preventing further discussion.",
+        "case": "Conversation terminated when questioning advertisements.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern because the chatbot creates a scenario where the user cannot continue questioning or seek clarification. By abruptly ending the conversation, the system avoids accountability and prevents the user from pursuing their concern further.",
+        "type": "Roach Motel",
+        "date": "July 30, 2023"
+    },
+    {
+        "id": 46,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/13s10ix/discord_doesnt_allow_you_to_cancel_nitro_via_the/",
+        "header": "Discord doesnt allow you to cancel nitro via the mobile app.",
+        "description": "A user discovers that they cannot cancel their Discord Nitro subscription via the Android mobile app. Instead, they are instructed to use the desktop app to manage their subscription.",
+        "case": "Obstructed cancellation path for subscriptions.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The system makes it easy to subscribe but difficult to cancel by restricting cancellation options to the desktop app, creating unnecessary friction for the user.",
+        "type": "Roach Motel",
+        "date": "May 27, 2023"
+    },
+    {
+        "id": 47,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/y0aio2/keep_the_app_open_for_an_hour_to_chat_with_a/",
+        "header": "Keep the app open for an hour to chat with a customer representative...",
+        "description": "A user is placed in a customer service queue with an estimated wait time of 59 minutes. They are instructed to keep the app open to maintain their place in the queue, effectively preventing them from using their device for other tasks during the wait.",
+        "case": "Forcing app retention during customer service wait time.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The system creates an unnecessary barrier by requiring the user to keep the app open, making it inconvenient to leave without losing their place in the queue.",
+        "type": "Roach Motel",
+        "date": "October 8, 2022"
+    },
+    {
+        "id": 48,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/183ryqu/binance_requires_download_of_their_app_to_maybe/",
+        "header": "Binance requires download of their app to maybe delete your account",
+        "description": "A user attempting to delete their Binance account is forced to download the mobile app as the only option to proceed. There is no clear confirmation if account deletion is even possible after downloading the app.",
+        "case": "Forced dependency on app download for account deletion.",
+        "explanation": "This aligns with the 'Forced Continuity' dark pattern. The platform imposes an unnecessary step (app download) as a condition for account deletion, creating friction and making the process deliberately inconvenient.",
+        "type": "Forced Continuity",
+        "date": "January 27, 2024"
+    },
+    {
+        "id": 49,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/e1w6jc/my_phone_company_charged_me_159month_for_a/",
+        "header": "My phone company charged me 1,59/month for a service I didn't activate. To deactivate it via chat, I have to pay 4 euros (language is Italian)",
+        "description": "A user was charged €1.59 per month for a service they did not activate. When attempting to deactivate the service via chat, they discovered they had to pay an additional €4 fee.",
+        "case": "Charging a fee to deactivate an unwanted service.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The service was activated without clear consent, and deactivating it is deliberately made difficult and costly, trapping the user in an unwanted subscription.",
+        "type": "Roach Motel",
+        "date": "November 29, 2019"
+    },
+    {
+        "id": 50,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/v81hsr/twitch_suddenly_forcing_users_to_give_their_phone/",
+        "header": "Twitch suddenly forcing users to give their phone number in order to be able to chat—this is on one account, and happens to EVERY channel's chat",
+        "description": "Twitch users are suddenly required to provide their phone number to participate in chat across all channels, even if they previously had no such requirement.",
+        "case": "Mandatory personal information disclosure for basic functionality.",
+        "explanation": "This aligns with the 'Privacy Zuckering' dark pattern. The platform forces users to disclose sensitive personal information (phone number) to access a previously available feature, creating unnecessary barriers and reducing user privacy.",
+        "type": "Privacy Zuckering",
+        "date": "June 21, 2022"
+    },
+    {
+        "id": 51,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/pizxrb/amazon_chat_help_forces_only_two_response_options/",
+        "header": "Amazon chat help forces only two response options, neither of which is helpful",
+        "description": "A user engages with Amazon's chat support but is limited to selecting between two predefined options: 'I want to cancel' and 'Ok, got it.' Neither option allows the user to ask follow-up questions or address their actual concern.",
+        "case": "Limited and unhelpful chatbot response options.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The system funnels the user into restricted response choices, preventing them from effectively resolving their query or accessing meaningful support.",
+        "type": "Roach Motel",
+        "date": "September 1, 2021"
+    },
+    {
+        "id": 52,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/iwh6gp/shopee_chat_makes_you_wait_3_whole_days_for_an/",
+        "header": "Shopee chat makes you wait 3 whole days for an agent to respond at a completely random time of day, then disconnects you for not responding within 3 minutes.",
+        "description": "A user experiences extreme delays with Shopee's chat support, waiting three days for an agent to respond. When the response finally comes at a random time, the user is disconnected after failing to reply within three minutes. Reconnecting takes another four days, repeating the same disconnection issue.",
+        "case": "Unreasonably long wait times paired with unrealistic response windows.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The support system traps users in an inefficient cycle, making it extremely difficult to resolve their issue due to excessive delays and short response windows, creating unnecessary frustration.",
+        "type": "Roach Motel",
+        "date": "September 21, 2020"
+    },
+    {
+        "id": 53,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/11l1paa/rogers_telecom_pushes_you_to_use_the_online/",
+        "header": "Rogers (telecom) pushes you to use the online chatbot instead of calling, but won't place you in a live chat queue because all agents are currently busy, which is the entire purpose of a queue...",
+        "description": "A user attempts to reach a live agent via Rogers' chatbot after being encouraged to use online support instead of calling. However, the chatbot refuses to place them in a queue, claiming all agents are busy, effectively blocking access to live assistance.",
+        "case": "Chatbot prevents access to live support despite offering it.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The chatbot makes it easy to initiate support but blocks meaningful resolution by preventing users from accessing live support, trapping them in an ineffective loop.",
+        "type": "Roach Motel",
+        "date": "March 7, 2023"
+    },
+    {
+        "id": 54,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/9lf0ap/vizio_online_customer_assistance_pushes_you_a/",
+        "header": "Vizio online customer assistance pushes you a link where they expect you to put in your credit card information and a $5 deposit in order to chat with an 'expert'",
+        "description": "A user seeking help through Vizio's online customer assistance is directed to a link requiring them to provide credit card details and make a $5 deposit to access chat support with an 'expert.'",
+        "case": "Paywall for basic customer support.",
+        "explanation": "This aligns with the 'Pay to Escape' dark pattern. The system places an artificial monetary barrier on accessing essential customer support, exploiting users in need of assistance.",
+        "type": "Pay to Escape",
+        "date": "October 2, 2018"
+    },
+    {
+        "id": 55,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/kak9sy/cibcs_live_chat_queue_has_a_limited_number_of/",
+        "header": "CIBC's live chat queue has a limited number of spots.",
+        "description": "A user attempting to access live chat support from CIBC is informed that the live chat queue has a limited number of spots, preventing them from joining the queue for assistance.",
+        "case": "Artificial scarcity in customer support queue.",
+        "explanation": "This aligns with the 'Roach Motel' dark pattern. The system restricts access to live support by artificially limiting queue spots, making it difficult for users to resolve their issues efficiently.",
+        "type": "Roach Motel",
+        "date": "December 12, 2020"
+    },
+    {
+        "id": 56,
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/assholedesign/comments/10c3x3x/please_subscribe_to_microsoft_365_to_receive/",
+        "header": "Please subscribe to Microsoft 365 to receive support via phone.",
+        "description": "A user attempting to contact Microsoft Support is informed that phone support is only available if they subscribe to Microsoft 365, effectively placing customer support behind a paywall.",
+        "case": "Paywall for essential customer support.",
+        "explanation": "This aligns with the 'Pay to Escape' dark pattern. Microsoft restricts phone support to paying subscribers, forcing users to purchase a subscription for access to basic customer service.",
+        "type": "Pay to Escape",
+        "date": "January 12, 2023"
     }
+
+
+
+
+
+
+
+
+
+
+
+
 ]
